@@ -1,10 +1,10 @@
 {
-  "name": "hola-mundo",
+  "name": "hola-mundo2",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --preserve-symlinks",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
