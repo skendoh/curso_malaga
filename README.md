@@ -1,2 +1,2 @@
 # curso_malaga
-Curso de angular.
+Curso de angular. (Malaga)
