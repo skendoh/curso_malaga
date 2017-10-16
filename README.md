@@ -1,2 +1,2 @@
 # curso_malaga
-Curso de angular. (Málaga) Tilde
+Curso de angular. (Málaga)
