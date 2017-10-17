@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  curso = 'Angular 4.x';
+  formador = 'Alejandro Cerezo Lasne';
+  empresa = 'Icono Training Consulting';
+  fecha = '2017';
 }
