@@ -1,0 +1,11 @@
+<div>
+  <p>
+    <label for="nombre">Dime tu nombre: </label>
+    <input type="text" id="nombre" name="name" [ngModel]="sNombre">
+  </p>
+  <h2>Resultados con value</h2>
+  <button (click)="btnBorrar()">Borrar</button>
+  <p>
+    Hola {{sNombre}}
+  </p>
+</div>
