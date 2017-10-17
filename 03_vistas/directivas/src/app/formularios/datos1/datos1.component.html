@@ -1,0 +1,21 @@
+<div class="container">
+  <p>
+    <label for="idea">Dime una idea: </label>
+    <input type="text" id="idea" name="idea" [(ngModel)]="sIdea">
+  </p>
+  <button (click)="btnInsert()">Añadir</button>
+  <button (click)="btnDelete()">Borrar</button>
+    <div *ngIf="aIdeas.length">
+      <p>Lista de ideas</p>
+      <ul>
+        <li *ngFor="let idea of aIdeas; let i = index">({{i+1}}){{idea}}</li>
+      </ul>
+    </div>
+
+    <div [hidden]="aIdeas.length ? false : true">
+      <p>Lista de ideas</p>
+      <ul>
+        <li *ngFor="let idea of aIdeas; let i = index">({{i+1}}){{idea}}</li>
+      </ul>
+    </div>
+</div>
