@@ -1,5 +1,15 @@
 <div class="container">
-<form class="container" (ngSubmit)="btnInsert()">
+<form class="container" name="myform" novalidate (ngSubmit)="btnInsert()" #myform="ngForm">
+   <p>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" [(ngModel)]="oLibro.user.name" required="true" minlength="2" #name="ngModel">
+  </p>
+  <div [hidden]="name.valid || name.pristine">El nombre es obligatorio y debe tener mas de dos caracteres</div>
+  <p>
+    <label for="telephone">Telephone: </label>
+    <input type="text" id="telephone" name="telephone" [(ngModel)]="oLibro.user.telephone" maxlength="9" minlength="9" #telephone="ngModel">
+  </p>
+  <div class="error-message" [hidden]="telephone.valid || telephone.pristine">Debe de tener al 9 caracteres</div>
   <p>
     <label for="autor">Autor: </label>
     <input type="text" id="autor" name="autor" [(ngModel)]="oLibro.autor">
@@ -33,7 +43,7 @@
       <option *ngFor="let pais of aPaises" [ngValue]="pais" >{{pais.nombre}}</option>
     </select>
 
-     <button type="submit" >Añadir</button>
+     <button type="submit" [disabled]="myform.invalid" >Añadir</button>
      <button type="button" (click)="btnDelete()" >Borrar</button>
 
 <div *ngIf="estaEnviado">

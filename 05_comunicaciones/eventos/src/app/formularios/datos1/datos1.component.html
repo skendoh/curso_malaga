@@ -1,0 +1,32 @@
+<div class="container">
+  <p>
+    <label for="idea">Dime una idea: </label>
+    <input type="text" id="idea" name="idea" [(ngModel)]="sIdea">
+  </p>
+   <p>
+    <label for="idea">Dime un autor: </label>
+    <input type="text" id="idea" name="idea" class="form-control" [(ngModel)]="autor">
+    <label for="idea">Dime un titulo: </label>
+    <input type="text" id="idea" name="idea" class="form-control" [(ngModel)]="titulo">
+  </p>
+  <button (click)="btnInsertBook()" class="btn-primary">Añadir Libro</button>
+  <button (click)="btnInsert()">Añadir</button>
+  <button (click)="btnDelete()">Borrar</button>
+  <button (click)="btnDeleteOne()">Borrar</button>
+
+<li *ngFor="let libro of aLibros; let i = index">({{i+1}}){{libro.autor}} es el autor del libro: {{libro.titulo}}</li>
+
+    <div *ngIf="aIdeas.length">
+      <p>Lista de ideas</p>
+      <ul>
+        <li *ngFor="let manolo of aIdeas; let i = index">({{i+1}}){{manolo.toUpperCase()}}</li>
+      </ul>
+    </div>
+
+    <div [hidden]="aIdeas.length ? false : true">
+      <p>Lista de ideas</p>
+      <ul>
+        <li *ngFor="let idea of aIdeas; let i = index">({{i+1}}){{idea}}</li>
+      </ul>
+    </div>
+</div>

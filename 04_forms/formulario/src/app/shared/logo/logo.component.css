@@ -3,5 +3,6 @@ div {
 	margin : 1em auto
 }
 img {
+	display: none;
 	width: 100%
 }

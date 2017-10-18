@@ -1,5 +1,5 @@
-import { Book, Pais } from '../book.model';
-import { Component, OnInit } from '@angular/core';
+import { Book, Pais, User } from '../book.model';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -11,6 +11,8 @@ export class Datos1Component implements OnInit {
 oLibro: Book;
 aPaises: Array<Pais>;
 estaEnviado: boolean;
+user: User;
+@ViewChild('myform') form: any;
 
   constructor() { }
 
@@ -31,6 +33,10 @@ estaEnviado: boolean;
         pais: {
             codigo: '',
             nombre: ''
+        },
+        user: {
+          name: '',
+          telephone: 0
         }
     };
 
@@ -38,7 +44,10 @@ estaEnviado: boolean;
       {codigo: 'UK', nombre: 'Reino unido'},
       {codigo: 'SP', nombre: 'España'}
     ];
-
+    this.user = {
+       name: '',
+          telephone: 0
+        }
     this.estaEnviado = false;
   }
 
@@ -58,6 +67,10 @@ estaEnviado: boolean;
         pais: {
             codigo: '',
             nombre: ''
+        },
+        user: {
+          name: '',
+          telephone: 0
         }
     };
     this.estaEnviado = false;

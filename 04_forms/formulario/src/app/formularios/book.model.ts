@@ -6,9 +6,15 @@ export interface Book {
         exlibris: boolean;
         genero: string;
         pais: Pais;
+        user: User;
 }
 
 export interface Pais {
        codigo: string;
        nombre: string;
+}
+
+export interface User {
+       name: string;
+       telephone: number;
 }
