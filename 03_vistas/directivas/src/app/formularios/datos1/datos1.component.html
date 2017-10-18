@@ -5,11 +5,11 @@
   </p>
    <p>
     <label for="idea">Dime un autor: </label>
-    <input type="text" id="idea" name="idea" [(ngModel)]="autor">
+    <input type="text" id="idea" name="idea" class="form-control" [(ngModel)]="autor">
     <label for="idea">Dime un titulo: </label>
-    <input type="text" id="idea" name="idea" [(ngModel)]="titulo">
+    <input type="text" id="idea" name="idea" class="form-control" [(ngModel)]="titulo">
   </p>
-  <button (click)="btnInsertBook()">Añadir Libro</button>
+  <button (click)="btnInsertBook()" class="btn-primary">Añadir Libro</button>
   <button (click)="btnInsert()">Añadir</button>
   <button (click)="btnDelete()">Borrar</button>
   <button (click)="btnDeleteOne()">Borrar</button>
